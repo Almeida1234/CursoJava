@@ -29,7 +29,6 @@ public class Aritmeticos {
 		System.out.println(a % b);
 		System.out.println(8 % 3);
 		
-		System.out.println(x + y - a * b);
 		
 	}
 
