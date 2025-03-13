@@ -1,5 +1,6 @@
 package fundamentos;
 
+import java.util.Locale;
 import java.util.Scanner;
 
 public class DesafioCalculadora {
@@ -12,13 +13,17 @@ public class DesafioCalculadora {
 		System.out.println("Calculadora para Adição, Subtração, Multiplicação, Divisão e resto da divisão \n");
 		Scanner entrada = new Scanner(System.in);
 		
-		System.out.println("Digite o primeiro número: ");
-		double num1 = entrada.nextDouble();
+		Locale.setDefault(Locale.US);
 		
-		System.out.println("Digite o segundo número: ");
-		double num2 = entrada.nextDouble();
+		System.out.print("Digite o primeiro número: ");
+		String imput1 = entrada.nextLine().replace(",", ".");
+		double num1 = Double.parseDouble(imput1);
 		
-		System.out.println("Digite a operação: +, -, *, /, % ");
+		System.out.print("Digite o segundo número: ");
+		String imput2 = entrada.nextLine().replace(",", ".");
+		double num2 = Double.parseDouble(imput2);
+		
+		System.out.print("Digite a operação: +, -, *, /, % ");
 		String operador = entrada.next();
 		
 		// Logica
