@@ -16,7 +16,8 @@ public class ExercicioControle5 {
 		
 		while(continuar != 0) {			
 			Random numeroAleatorio = new Random();
-			numeroSorteado = numeroAleatorio.nextInt(101);
+			numeroSorteado = numeroAleatorio.nextInt(1011);
+			//System.out.println(numeroSorteado);
 			tentativas = 0;
 			
 			System.out.println("Começar jogo, tente adivinhar o número de 0 á 100 em até 10 tentativas!\n");
