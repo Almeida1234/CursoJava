@@ -12,7 +12,7 @@ public class DesafioMedia extends DesafioNota  {
         }
         double soma = 0;
         for (double somaNota : notasAluno) {
-            soma += somaNota;
+            soma += somaNota; 
         }
         return soma;
     }
