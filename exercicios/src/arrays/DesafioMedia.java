@@ -23,7 +23,7 @@ public class DesafioMedia extends DesafioNota  {
         double somaNotas = somaTotalNotas();
         // Usa o atributo notasAluno para obter a quantidade de notas
         int qtdNotas = notasAluno.length;
-
+        System.out.println("Soma Final: " + somaTotalNotas());
         // Calcula a média dividindo a soma das notas pela quantidade de notas
         return somaNotas / qtdNotas;
     }
