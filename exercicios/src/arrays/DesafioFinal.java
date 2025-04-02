@@ -7,5 +7,6 @@ public class DesafioFinal {
         //
         // Chama o método mediaFinal() para calcular e mostrar a média
         System.out.println("Média final: " + desafio.mediaFinal());
+        
 	}	
 }
