@@ -40,8 +40,9 @@ public class ConjuntoBaguncado {
 		System.out.println(nums);
 		System.out.println(conjunto);
 		
-		// conjunto.addAll(nums); // União entre dois conjuntos
-		conjunto.retainAll(nums);
+		conjunto.addAll(nums); // União entre dois conjuntos
+		System.out.println(conjunto);
+		conjunto.retainAll(nums); // Elimina o que tem de igual
 		System.out.println(conjunto);
 		
 		conjunto.clear();
