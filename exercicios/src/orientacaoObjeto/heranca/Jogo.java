@@ -12,9 +12,9 @@ public class Jogo {
 		monstro.andar(Direcao.LESTE);
 		monstro.andar(Direcao.OESTE);
 		
-		Heroi heroi = new Heroi();
-		heroi.x = 10;
-		heroi.y = 11;
+		Heroi heroi = new Heroi(10, 11);
+//		heroi.x = 10;
+//		heroi.y = 11;
 		heroi.andar(Direcao.NORTE);
 		heroi.andar(Direcao.SUL);
 		heroi.andar(Direcao.LESTE);
