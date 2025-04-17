@@ -4,7 +4,7 @@ public class CarroTeste {
 	
 	public static void main(String[] args) {
 		
-		Carro city = new Carro();
+		Carro city = new Carro(10);
 		city.acelerar();
 		city.acelerar();
 		city.acelerar();
@@ -13,7 +13,6 @@ public class CarroTeste {
 		System.out.println(city);
 
 		System.out.println();
-		
 		
 		Ferrari ferrari = new Ferrari();
 		ferrari.acelerar();

@@ -2,34 +2,34 @@ package orientacaoObjeto.heranca.desafio;
 
 public class Ferrari extends Carro{
 	
-	@Override
-	void acelerar() {
-		if(velocidadeAtual >= 0) {
-			velocidadeAtual += 15;
-		}
+	Ferrari(){
+		this(350);		
 	}
 	
-	@Override
-	void frear() { 
-		if(velocidadeAtual >= 5) {
-			velocidadeAtual -= 15;
-		}else {
-			velocidadeAtual = 0;
-		}
-	}
+	Ferrari(int velocidadeMaxima){
+		super(velocidadeMaxima);	
+		delta = 15;
+		deltaf = 15;
+	}	
 	
-//	void acelerar(Carro acelerar) {
-//		if(velocidadeAtual >= 0) {
-//			velocidadeAtual += 15;
+//	@Override
+//	void acelerar() {
+//		delta = 15;
+//		if(velocidadeAtual + delta > VELOCIDADE_MAXIMA) { 
+//			velocidadeAtual = VELOCIDADE_MAXIMA;
+//		} else {
+//			velocidadeAtual += delta;
 //		}
 //	}
 //	
-//	void frear(Carro acelerar) {
+	@Override
+	void frear() { 
+		super.frear();
 //		if(velocidadeAtual >= 5) {
-//			velocidadeAtual -= 5;
+//			velocidadeAtual -= deltaf;
 //		}else {
 //			velocidadeAtual = 0;
 //		}
-//	}
-
+	}
+	
 }

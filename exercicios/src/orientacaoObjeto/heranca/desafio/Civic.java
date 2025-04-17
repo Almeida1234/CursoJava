@@ -2,34 +2,34 @@ package orientacaoObjeto.heranca.desafio;
 
 public class Civic extends Carro{
 	
+	Civic(){
+		this(250);		
+	}
+	
+	Civic(int velocidadeMaxima){
+		super(velocidadeMaxima);
+		delta = 10;
+	}
+	
 	@Override
 	void acelerar() {
-		if(velocidadeAtual >= 0) {
-			velocidadeAtual += 10;
-		}
+		super.acelerar();
+//		delta = 10;
+//		if(velocidadeAtual + delta > VELOCIDADE_MAXIMA) { 
+//			velocidadeAtual = VELOCIDADE_MAXIMA;
+//		} else {
+//			velocidadeAtual += delta;
+//		}
 	}
 	
 	@Override
 	void frear() { 
+		deltaf = 10;
 		if(velocidadeAtual >= 5) {
-			velocidadeAtual -= 10;
+			velocidadeAtual -= deltaf;
 		}else {
 			velocidadeAtual = 0;
 		}
 	}
 		
-//	void acelerar(Carro acelerar) {
-//		if(velocidadeAtual >= 0) {
-//			velocidadeAtual += 10;
-//		}
-//	}
-//	
-//	void frear(Carro acelerar) {
-//		if(velocidadeAtual >= 5) {
-//			velocidadeAtual -= 5;
-//		}else {
-//			velocidadeAtual = 0;
-//		}
-//	}
-
 }
