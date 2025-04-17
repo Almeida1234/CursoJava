@@ -4,18 +4,49 @@ public class Jogo {
 	
 	public static void main(String[] args) {
 		
-		Jogador j1 = new Jogador();
-		j1.x = 10;
-		j1.y = 20;
-		j1.andar(Direcao.NORTE);
-		j1.andar(Direcao.NORTE);
-		j1.andar(Direcao.NORTE);
-		j1.andar(Direcao.SUL);
-		j1.andar(Direcao.LESTE);
-		j1.andar(Direcao.OESTE);
+		Monstro monstro = new Monstro();
+		monstro.x = 10;
+		monstro.y = 10;
+		monstro.andar(Direcao.NORTE);
+		monstro.andar(Direcao.SUL);
+		monstro.andar(Direcao.LESTE);
+		monstro.andar(Direcao.OESTE);
 		
-		System.out.println(j1.y);
-		System.out.println(j1.x);
+		Heroi heroi = new Heroi();
+		heroi.x = 10;
+		heroi.y = 11;
+		heroi.andar(Direcao.NORTE);
+		heroi.andar(Direcao.SUL);
+		heroi.andar(Direcao.LESTE);
+		heroi.andar(Direcao.OESTE);
+		
+		System.out.println("Monstro tem => " + monstro.vida);
+		System.out.println(monstro.x);
+		System.out.println(monstro.y);
+		
+		System.out.println();
+		
+		
+		System.out.println("Heroi tem => " + heroi.vida);
+		System.out.println(heroi.x);
+		System.out.println(heroi.y);
+		
+		System.out.println();
+		
+		monstro.atacar(heroi);
+		monstro.atacar(heroi);
+		System.out.println("Monstro tem => " + monstro.vida);
+		System.out.println("Heroi tem => " + heroi.vida);
+		
+		System.out.println();
+		
+		heroi.atacar(monstro);
+		
+		//monstro.andar(Direcao.NORTE);
+		
+		heroi.atacar(monstro);
+		System.out.println("Monstro tem => " + monstro.vida);
+		System.out.println("Heroi tem => " + heroi.vida);
 		
 	}
 
