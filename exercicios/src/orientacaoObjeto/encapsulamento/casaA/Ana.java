@@ -7,9 +7,9 @@ public class Ana {
 	// Ana é mãe de Pedro, não moram na mesma casa / Outro package
 	
 	@SuppressWarnings("unused")
-	private String segredo = "...";
+	private String segredo = "..."; // visualizado só nesta classe
 	String facoDentroDeCasa = "..."; // default ou pacote
-	protected String formaDeFalar = "...";
-	public String todosSabem = "...";
+	protected String formaDeFalar = "..."; // Transmitido por Herança
+	public String todosSabem = "..."; // visualizado por todos
 
 }
