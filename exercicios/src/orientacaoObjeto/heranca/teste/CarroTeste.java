@@ -4,7 +4,7 @@ import orientacaoObjeto.heranca.desafio.Carro;
 import orientacaoObjeto.heranca.desafio.Civic;
 import orientacaoObjeto.heranca.desafio.Ferrari;
 
-public class CarroTeste {
+public class CarroTeste extends Carro {
 	
 	public static void main(String[] args) {
 		

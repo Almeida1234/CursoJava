@@ -10,7 +10,7 @@ public class Jogador {
 //		this(0, 0);
 //	}
 	
-	public Jogador(int x, int y){
+	protected Jogador(int x, int y){
 		this.x = x;
 		this.y = y;
 	}

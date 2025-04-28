@@ -2,10 +2,10 @@ package orientacaoObjeto.heranca.desafio;
 
 public class Carro {
 
-	final int VELOCIDADE_MAXIMA;
+	public final int VELOCIDADE_MAXIMA;
 	public int velocidadeAtual;
-	public int delta = 5;
-	public int deltaf = 5;
+	protected int delta = 5;
+	protected int deltaf = 5;
 		
 	public Carro(){
 		VELOCIDADE_MAXIMA = 180;

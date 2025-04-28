@@ -1,6 +1,6 @@
 package orientacaoObjeto.heranca.teste;
 
-import orientacaoObjeto.heranca.Direcao ;
+import orientacaoObjeto.heranca.Direcao;
 import orientacaoObjeto.heranca.Heroi;
 import orientacaoObjeto.heranca.Monstro;
 
