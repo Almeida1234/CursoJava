@@ -4,7 +4,7 @@ public class Carro {
 
 	public final int VELOCIDADE_MAXIMA;
 	public int velocidadeAtual;
-	protected int delta = 5;
+	private int delta = 5;
 	protected int deltaf = 5;
 		
 	public Carro(){
