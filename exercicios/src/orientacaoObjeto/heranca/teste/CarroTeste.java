@@ -20,9 +20,25 @@ public class CarroTeste extends Carro {
 		
 		Ferrari ferrari = new Ferrari();
 		ferrari.acelerar();
+		System.out.println(ferrari);
 		ferrari.acelerar();
 		ferrari.acelerar();
 		ferrari.frear();
+		
+		System.out.println("A Ferrari está a: " + ferrari.velocidadeAtual + "km por hora.");
+		System.out.println(ferrari);
+		
+		System.out.println();
+		
+		ferrari.getDelta();
+		ferrari.ligarTurbo();
+		ferrari.ligarAr();
+		ferrari.desligarAr();
+		
+		System.out.println(ferrari.getDelta());
+		System.out.println(ferrari.velocidadeDoAr());
+		ferrari.acelerar();
+		//ferrari.acelerar();
 		System.out.println("A Ferrari está a: " + ferrari.velocidadeAtual + "km por hora.");
 		System.out.println(ferrari); 
 		
