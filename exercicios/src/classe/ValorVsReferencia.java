@@ -39,7 +39,7 @@ public class ValorVsReferencia {
 		alterarPrimitivo(c);
 		
 		System.out.println(c);
-		System.out.println("Teste");
+		System.out.println("Teste2");
 	
 	}
 
