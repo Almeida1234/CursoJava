@@ -11,6 +11,9 @@ public class Data {
 		//mes = 01;
 		//ano = 1970;
 		this(01, 01, 1970);
+		
+//		int a;
+//		System.out.println(a)// irá ocorrer erro, por não ter sido inicializada a variável, diferente de um atributo de classe que é inicializado com valor padrão.	
 	}
 	Data(int dia){
 		this.dia = dia;
