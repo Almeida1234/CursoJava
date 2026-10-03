@@ -1,31 +1,63 @@
 package classe.desafio;
 
+import java.util.Scanner;
+
 public class Jantar {
 	
 	public static void main(String[] args) {
 		
-		Comida comida1 = new Comida("Feijão", 0.223);
+		Scanner entrada = new Scanner(System.in);
 		
-		Comida comida2 = new Comida();
-		comida2.nomeComida = "Arroz";
-		comida2.pesoComida = 0.300;
+		Pessoa pessoa1 = new Pessoa();
+		pessoa1.nomePessoa = Pessoa.lerNome(entrada, "Digite o nome da primeira pessoa: ");
+		pessoa1.pesoPessoa = lerPeso(entrada, "Digite o peso da primeira pessoa: ");
 		
-		Pessoa pessoa1 = new Pessoa("Ricardo", 82.0);
-		
-		Pessoa pessoa2 = new Pessoa();
-		pessoa2.nome = "Cecilia";
-		pessoa2.peso = 59.0;
-		
-		System.out.println("Peso da " + pessoa1.nome + " antes de comer: " + pessoa1.peso);
-		System.out.println("Peso da " + pessoa2.nome + " antes de comer: " + pessoa2.peso);
-		
-		pessoa1.comer(comida2);
-		pessoa2.comer(comida1);
-		
-		System.out.printf("%nPeso do %s depois de comer %s: %.3f", pessoa1.nome, comida2.nomeComida, pessoa1.peso);
-		System.out.printf("\nPeso da %s depois de comer %s: %.3f", pessoa2.nome, comida1.nomeComida, pessoa2.peso);
+		String nomepessoa2 = Pessoa.lerNome(entrada, "Digite o nome da segunda pessoa: ");
+		double pesopessoa2 = lerPeso(entrada, "Digite o peso da segunda pessoa: ");
+		Pessoa pessoa2 = new Pessoa(nomepessoa2, pesopessoa2);
 		
 		
+		Comida comida1 = new Comida();
+		comida1.nomeComida = Pessoa.lerNome(entrada, "Digite o nome da primeira comida: ");
+		comida1.pesoComida = lerPeso(entrada, "Digite o peso da primeira comida: ");
+		
+		String nomecomida2 = Pessoa.lerNome(entrada, "Digite o nome da segunda comida: ");
+		double pesocomida2 = lerPeso(entrada, "Digite o peso da segunda comida: ");
+		Comida comida2 = new Comida(nomecomida2, pesocomida2);
+		
+		System.out.printf("%nPeso do %s antes de comer: %.3f", pessoa1.nomePessoa, pessoa1.pesoPessoa);
+		System.out.printf("%nPeso do %s antes de comer: %.3f", pessoa2.nomePessoa, pessoa2.pesoPessoa);
+		
+		pessoa1.retornoNovoPeso(comida1);
+		pessoa2.comer(comida2);
+		
+		System.out.printf("%nPeso do %s depois de comer %s: %.3f", pessoa1.nomePessoa, comida1.nomeComida, pessoa1.pesoPessoa);
+		System.out.printf("%nPeso do %s depois de comer %s: %.3f", pessoa2.nomePessoa, comida2.nomeComida, pessoa2.pesoPessoa);
+			
+		entrada.close();
+	}
+	
+	
+	
+	private static double lerPeso(Scanner entrada, String mensagem) {
+		
+		while(true) {
+			System.out.print(mensagem);
+			String valor = entrada.nextLine().trim();
+			
+			valor = valor.replace(",", "."); // Substitui vírgula por ponto para permitir entrada de números decimais
+			
+			try {
+				double peso = Double.parseDouble(valor);
+				if(peso > 0) {
+					return peso;
+				} else {
+					System.out.println("Peso deve ser maior que zero. Tente novamente.");
+				}
+			} catch (NumberFormatException e) {
+				System.out.println("Entrada inválida. Por favor, insira um número válido.");
+			}
+		}
 	}
 
 }

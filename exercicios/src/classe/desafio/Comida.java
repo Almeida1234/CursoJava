@@ -9,9 +9,9 @@ public class Comida {
 		
 	}
 	
-	Comida(String nome, double peso){
-		nomeComida = nome;
-		this.pesoComida = peso;
+	Comida(String nomeComida, double pesoComida){
+		this.nomeComida = nomeComida;
+		this.pesoComida = pesoComida;
 	}
 
 }
